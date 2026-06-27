@@ -193,7 +193,7 @@ SELECT
   ROUND(SUM(qty_mt) - AVG(SUM(qty_mt)) OVER (), 2) AS Difference_From_Avg
 FROM suneja_sons
 GROUP BY Customer
-HAVING SUM('qty_mt') <= 10;
+HAVING SUM(qty_mt) <= 10;
 
 #WITH CTE 
 
