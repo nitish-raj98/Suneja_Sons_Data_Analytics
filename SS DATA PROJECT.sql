@@ -14,7 +14,7 @@ RANK() OVER(ORDER BY SO_No) AS "RANK",
 dense_rank() OVER(ORDER BY SO_No) AS "dense_rank"
 FROM suneja_sons;
 
-# ✅ Question 1: Customer Loyalty Analysis (ROW_NUMBER, CTE, HAVING)
+# Customer Loyalty Analysis (ROW_NUMBER, CTE, HAVING)
 
 WITH customer_analysis AS (
   SELECT 
@@ -147,7 +147,7 @@ FROM suneja_sons
 GROUP BY customer, DATE_FORMAT(`Po_Placing_Date`, '%Y-%m')
 ORDER BY customer, month;
 
-#✅ Question 3: Quarter-over-Quarter Analysis (LAG, date functions)
+# Quarter-over-Quarter Analysis (LAG, date functions)
 
 WITH monthly_analysis AS (
   SELECT
