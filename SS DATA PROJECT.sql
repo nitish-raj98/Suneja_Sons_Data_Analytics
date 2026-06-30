@@ -32,7 +32,7 @@ select Customer, SUM('QTY_MT') from suneja_sons where STATUS = "Pending" GROUP B
 SELECT 
   Customer,
   SUM(QTY_MT) AS Total_Quantity,
-  dense_rank() OVER (PARTITION BY Customer ORDER BY SUM(QTY_MT)) AS ROW_NUM
+  dense_rank() OVER (ORDER BY SUM(QTY_MT)) AS ROW_NUM
 FROM suneja_sons 
 WHERE STATUS = "Pending" 
 GROUP BY Customer 
@@ -51,7 +51,7 @@ SELECT * FROM suneja_sons where Customer = "suneja sons";
 
 SELECT 
     Customer, 
-    ROUND(SUM(`QTY-MT`)) as Total_Quantity
+    ROUND(SUM(`QTY_MT`)) as Total_Quantity
 FROM suneja_sons 
 GROUP BY Customer ORDER BY ROUND(SUM(`QTY-MT`)) desc limit 5;
 
