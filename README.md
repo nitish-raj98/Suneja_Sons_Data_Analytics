@@ -159,7 +159,7 @@ Suneja_Sons_Data_Analytics/
 
 ---
 
-## 🔍 SQL Analysis Techniques
+## 🔍 SQL Analysis Techniques --
 
 ### Window Functions Used
 - `ROW_NUMBER()` - Customer and status ranking
